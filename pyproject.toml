@@ -10,7 +10,7 @@ authors = [
 ]
 description = "A banned identifiers checker for Haskell sources"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
