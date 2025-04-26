@@ -14,8 +14,9 @@ requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
-license = "MIT"
-license-files = ["LICEN[CS]E*"]
+
+[project.license]
+file = "LICENSE"
 
 dependencies = [
     "click>=8.1.8",
