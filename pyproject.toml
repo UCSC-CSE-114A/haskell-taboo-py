@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 79.0.1"]
+requires = ["setuptools >= 79.0.1", "vermin"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["build"]
+dev = ["build", "vermin"]
 
 [project.urls]
 Homepage = "https://github.com/s5bug/haskell-taboo-py"
