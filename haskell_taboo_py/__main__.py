@@ -8,6 +8,14 @@ from tree_sitter import Language, Parser
 
 HS_LANGUAGE = Language(tree_sitter_haskell.language())
 
+def in_import_node(node) -> bool:
+    while node is not None:
+        if node.type == "import":
+            return True
+
+        node = node.parent
+
+    return False
 
 @click.command(name="haskell-taboo-py", add_help_option=False)
 @click.argument("taboo_file", type=click.Path(exists=True, dir_okay=False))
@@ -41,6 +49,9 @@ def main(taboo_file: str, source_path: tuple[str, ...]) -> int:
                 for variable_name_node in variable_names:
                     variable_name: bytes = variable_name_node.text
                     if variable_name not in taboo_words:
+                        continue
+
+                    if in_import_node(variable_name_node):
                         continue
 
                     if not seen_taboo_word:
