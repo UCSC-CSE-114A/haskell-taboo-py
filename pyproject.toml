@@ -28,8 +28,8 @@ dependencies = [
 dev = ["build", "vermin"]
 
 [project.urls]
-Homepage = "https://github.com/s5bug/haskell-taboo-py"
-Issues = "https://github.com/s5bug/haskell-taboo-py/issues"
+Homepage = "https://github.com/UCSC-CSE-114A/taboo-checker-py"
+Issues = "https://github.com/UCSC-CSE-114A/taboo-checker-py/issues"
 
 [project.scripts]
 haskell-taboo-py = "haskell_taboo_py:haskell_taboo_py"
